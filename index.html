@@ -39,22 +39,54 @@
                 <a href="./cat/cryp.html" class="post-cat">Cryptography</a>
                 <a href="./cat/econ.html" class="post-cat">Economics</a>
                 <a href="./cat/frag.html" class="post-cat">Fragments</a>
-                <a href="./cat/phi.html" class="post-cat">Philosophy</a>
+                <a href="./cat/phi.html" class="post-cat">Blue Team</a>
+                <a href="./cat/nep.html" class="post-cat">LLMs</a>
             </div>
         </center>
         <hr>
-        <ul class="post-list">
-            <li>
-                <span class="post-meta">2025 Feb 2</span>
-                <h2>
-                    <a href="#" class="post-link">Avalanche Effect</a>
-                </h2>
-            </li>
-            <!-- Add more list items as needed -->
+        <ul class="post-list" id="recent-posts">
+            <li class="loading">Loading posts...</li>
         </ul>
     </div>
 
+    <script src="./src/markdown.js"></script>
+    <script src="./src/blog.js"></script>
     <script src="./src/index.js"></script>
+    <script>
+        // Load recent posts
+        document.addEventListener('DOMContentLoaded', async () => {
+            const blogSystem = new BlogSystem();
+            try {
+                const posts = await blogSystem.loadPosts();
+                const recentPostsList = document.getElementById('recent-posts');
+                
+                // Sort posts by date (newest first) and take first 10
+                const recentPosts = posts
+                    .sort((a, b) => {
+                        // Handle various date formats
+                        return new Date(b.date) - new Date(a.date);
+                    })
+                    .slice(0, 10);
+                
+                if (recentPosts.length > 0) {
+                    recentPostsList.innerHTML = recentPosts.map(post => `
+                        <li>
+                            <span class="post-meta">${post.date}</span>
+                            <h2>
+                                <a href="${post.url}" class="post-link">${post.title}</a>
+                            </h2>
+                        </li>
+                    `).join('');
+                } else {
+                    recentPostsList.innerHTML = '<li><p>No posts found.</p></li>';
+                }
+            } catch (error) {
+                console.error('Failed to load posts:', error);
+                document.getElementById('recent-posts').innerHTML = 
+                    '<li><p>Failed to load posts. Please try again later.</p></li>';
+            }
+        });
+    </script>
 </body>
 
 </html>
