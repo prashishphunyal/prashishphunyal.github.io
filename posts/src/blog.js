@@ -111,7 +111,7 @@ class BlogSystem {
         <li>
           <span class="post-meta">${post.date}</span>
           <h2>
-            <a href="${post.url}" class="post-link">${post.title}</a>le}</a>
+            <a href="${post.url}" class="post-link">${post.title}</a>
           </h2>
         </li>
       `)
