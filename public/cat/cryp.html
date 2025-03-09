@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LLMs | Prashish Phunyal</title>
+    <title>Cryptography | Prashish Phunyal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style.css">
     <style>
@@ -43,10 +43,11 @@
         </div>
     </header>
     
+    <div class="category-title">
+        <h1>Cryptography</h1>
+    </div>
+    
     <div class="main">
-        <div class="category-title">
-            <h1>LLMs</h1>
-        </div>
         <hr>
         <center>
             <div class="categories">
@@ -54,8 +55,8 @@
                 <a href="../cat/cryp.html" class="post-cat">Cryptography</a>
                 <a href="../cat/econ.html" class="post-cat">Economics</a>
                 <a href="../cat/frag.html" class="post-cat">Fragments</a>
-                <a href="../cat/phi.html" class="post-cat">Blue Team</a>
-                <a href="../cat/nep.html" class="post-cat">LLMs</a>
+                <a href="../cat/blt.html" class="post-cat">Blue Team</a>
+                <a href="../cat/llms.html" class="post-cat">LLMs</a>
             </div>
         </center>
         <hr>
@@ -73,7 +74,7 @@
             const blogSystem = new BlogSystem();
             const posts = await blogSystem.loadPosts();
             const postsList = document.getElementById('category-posts');
-            postsList.innerHTML = blogSystem.renderPostList(posts, 'nep') || 
+            postsList.innerHTML = blogSystem.renderPostList(posts, 'cryp') || 
                 '<li><p>No posts found in this category.</p></li>';
         });
     </script>

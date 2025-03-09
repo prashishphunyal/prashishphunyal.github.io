@@ -18,8 +18,8 @@ const CATEGORIES = {
   'cryp': 'Cryptography',
   'econ': 'Economics',
   'frag': 'Fragments',
-  'phi': 'Blue Team',
-  'nep': 'LLMs'
+  'blt': 'Blue Team',
+  'llms': 'LLMs'
 };
 
 // Create a new markdown converter
@@ -195,7 +195,7 @@ async function buildSite() {
           date: metadata.date,
           category: category,
           slug: metadata.slug,
-          url: `/${category}/${metadata.slug}.html`
+          url: `/posts/${category}/${metadata.slug}.html`
         });
       }
     }
