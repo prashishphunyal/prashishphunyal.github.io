@@ -53,11 +53,18 @@ class BlogSystem {
   createPostHTML(postContent, metadata) {
     const template = `
       <!DOCTYPE html>
-      <html lang="en" data-theme="${localStorage.getItem('theme') || 'dark'}">
+      <html lang="en">
       <head>
         <meta charset="UTF-8">
         <title>${metadata.title} | Prashish Phunyal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+          // Apply theme immediately to prevent flash
+          (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          })();
+        </script>
         <link rel="stylesheet" href="/src/style.css">
         <link rel="stylesheet" href="/src/blog.css">
       </head>

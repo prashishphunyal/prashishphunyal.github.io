@@ -89,6 +89,11 @@
     margin-bottom: 0.5rem;
 }
 
+/* Remove any transitions that might exist */
+* {
+    transition: none !important;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 480px) {
     .blog-post {

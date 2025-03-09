@@ -5,6 +5,11 @@
     padding: 2rem;
 }
 
+/* Remove any transitions that might exist */
+* {
+    transition: none !important;
+}
+
 .blog-post .post-header {
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--primary-color);
