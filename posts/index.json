@@ -1,16 +1,16 @@
 [
   {
+    "title": "Comparing Blockchain Consensus Mechanisms",
+    "date": "Feb 4, 2025",
+    "category": "bloc",
+    "slug": "consensus-mechanisms",
+    "url": "public/bloc/consensus-mechanisms.html"
+  },
+  {
     "title": "Understanding the Avalanche Effect in Cryptography",
     "date": "2023-06-15",
     "category": "cryp",
     "slug": "avalanche-effect",
-    "url": "publick/cryp/avalanche-effect.html"
-  },
-  {
-    "title": "Comparing Blockchain Consensus Mechanisms",
-    "date": "2023-07-23",
-    "category": "bloc",
-    "slug": "consensus-mechanisms",
-    "url": "public/bloc/consensus-mechanisms.html"
+    "url": "public/cryp/avalanche-effect.html"
   }
 ]

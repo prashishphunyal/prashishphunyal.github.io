@@ -9,7 +9,7 @@ const MarkdownConverter = require('./src/markdown.js');
 
 // Configuration
 const POSTS_DIR = './posts';
-const OUTPUT_DIR = './public';
+const OUTPUT_DIR = './posts';
 const SITE_URL = 'https://prashishphunyal.github.io';
 
 // Categories
@@ -66,6 +66,13 @@ function slugify(title) {
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/--+/g, '-');
+}
+
+// Remove duplicate heading from content
+function removeDuplicateHeading(content, title) {
+  // Check if content starts with the title as a heading
+  const headingPattern = new RegExp(`^# ${title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*\n`, 'm');
+  return content.replace(headingPattern, '');
 }
 
 // Create HTML template for a blog post
@@ -166,8 +173,11 @@ async function buildSite() {
         // Set category from directory name
         metadata.category = category;
         
+        // Remove duplicate heading if present
+        const processedContent = removeDuplicateHeading(markdownContent, metadata.title);
+        
         // Convert markdown to HTML
-        const htmlContent = converter.convert(markdownContent);
+        const htmlContent = converter.convert(processedContent);
         
         // Create HTML post
         const postHTML = createPostHTML(htmlContent, metadata);
