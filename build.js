@@ -18,7 +18,7 @@ const CATEGORIES = {
   'cryp': 'Cryptography',
   'econ': 'Economics',
   'frag': 'Fragments',
-  'blt': 'Blue Team',
+  'math': 'Mathematics',
   'llms': 'LLMs'
 };
 

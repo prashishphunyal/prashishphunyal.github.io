@@ -1,8 +1,8 @@
 ---
-title: Comparing Blockchain Consensus Mechanisms
-date: Feb 4, 2025
+title: Blockchain 101 - Understanding the Basics of Blockchain
+date: Jan 2, 2025
 category: bloc
-slug: consensus-mechanisms
+slug: blockchain-101
 ---
 
 # Comparing Blockchain Consensus Mechanisms
