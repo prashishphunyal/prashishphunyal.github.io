@@ -1,8 +1,8 @@
 ---
-title: Understanding the Avalanche Effect in Cryptography
-date: 2023-06-15
+title: What is a Merkle Root?
+date: February 5, 2025
 category: cryp
-slug: avalanche-effect
+slug: merkle-root
 ---
 
 # Understanding the Avalanche Effect in Cryptography

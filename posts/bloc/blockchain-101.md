@@ -1,6 +1,6 @@
 ---
 title: Blockchain 101 - Understanding the Basics of Blockchain
-date: Jan 2, 2025
+date: February 20, 2025
 category: bloc
 slug: blockchain-101
 ---

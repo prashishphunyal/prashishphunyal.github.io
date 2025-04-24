@@ -1,44 +1,30 @@
 [
   {
-    "title": "Comparing Blockchain Consensus Mechanisms",
-    "date": "Feb 4, 2025",
+    "title": "Pea and the sun",
+    "date": "March 1, 2025",
+    "category": "math",
+    "slug": "pea_and_the_sun",
+    "url": "/posts/math/pea_and_the_sun.html"
+  },
+  {
+    "title": "Blockchain 101 - Understanding the Basics of Blockchain",
+    "date": "February 20, 2025",
     "category": "bloc",
-    "slug": "consensus-mechanisms",
-    "url": "/posts/bloc/consensus-mechanisms.html"
+    "slug": "blockchain-101",
+    "url": "/posts/bloc/blockchain-101.html"
   },
   {
-    "title": "Fine-Tuning LLMs for Specialized Knowledge Domains",
-    "date": "2023-11-05",
-    "category": "llms",
-    "slug": "fine-tuning-llms",
-    "url": "/posts/llms/fine-tuning-llms.html"
-  },
-  {
-    "title": "Reflections on Web3 Development",
-    "date": "2023-09-22",
+    "title": "Obsession with blockchains and some reflections",
+    "date": "February 8, 2025",
     "category": "frag",
-    "slug": "web3-reflections",
-    "url": "/posts/frag/web3-reflections.html"
+    "slug": "blockchain-reflection",
+    "url": "/posts/frag/blockchain-reflection.html"
   },
   {
-    "title": "The Impact of Blockchain on Global Economics",
-    "date": "2023-08-15",
-    "category": "econ",
-    "slug": "blockchain-economics",
-    "url": "/posts/econ/blockchain-economics.html"
-  },
-  {
-    "title": "Essential Security Practices for DevOps Teams",
-    "date": "2023-07-30",
-    "category": "blt",
-    "slug": "devsecops-practices",
-    "url": "/posts/blt/devsecops-practices.html"
-  },
-  {
-    "title": "Understanding the Avalanche Effect in Cryptography",
-    "date": "2023-06-15",
+    "title": "What is a Merkle Root?",
+    "date": "February 5, 2025",
     "category": "cryp",
-    "slug": "avalanche-effect",
-    "url": "/posts/cryp/avalanche-effect.html"
+    "slug": "merkle-root",
+    "url": "/posts/cryp/merkle-root.html"
   }
 ]

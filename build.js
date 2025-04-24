@@ -10,7 +10,6 @@ const MarkdownConverter = require('./src/markdown.js');
 // Configuration
 const POSTS_DIR = './posts';
 const OUTPUT_DIR = './posts';
-const SITE_URL = 'https://prashishphunyal.github.io';
 
 // Categories
 const CATEGORIES = {
@@ -106,7 +105,7 @@ function createPostHTML(postContent, metadata) {
         <div class="socials">
           <a href="https://www.instagram.com/prashishphunyal" target="_blank">Instagram</a>
           <a href="https://www.x.com/prashishphunyal" target="_blank">Twitter</a>
-          <a href="https://www.github.com/prashishphunyal" target="_blank">Github</a>
+          <a href="https://bsky.app/profile/prashish.bsky.social" target="_blank">Bluesky</a>
         </div>
       </header>
       <div class="main blog-post">

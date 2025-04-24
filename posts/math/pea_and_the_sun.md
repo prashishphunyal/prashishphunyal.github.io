@@ -1,8 +1,8 @@
 ---
 title: Pea and the sun
-date: 2023-07-30
+date: March 1, 2025
 category: math
-slug: devsecops-practices
+slug: pea_and_the_sun
 ---
 
 // ...rest of content remains unchanged...

@@ -1,8 +1,8 @@
 ---
-title: Reflections on Web3 Development
-date: 2023-09-22
+title: Obsession with blockchains and some reflections
+date: February 8, 2025
 category: frag
-slug: web3-reflections
+slug: blockchain-reflection
 ---
 
 # Reflections on Web3 Development
