@@ -206,12 +206,6 @@ async function buildSite() {
     // Create posts directory in output
     ensureDirectoryExists(path.join(OUTPUT_DIR, 'posts'));
     
-    // Write posts index to both locations (for compatibility)
-    fs.writeFileSync(
-      path.join(OUTPUT_DIR, 'posts', 'index.json'),
-      JSON.stringify(postsIndex, null, 2)
-    );
-    
     // Also copy the index to the root posts directory for local development
     ensureDirectoryExists('./posts');
     fs.writeFileSync(
@@ -220,77 +214,10 @@ async function buildSite() {
     );
     
     console.log(`Generated posts index with ${postsIndex.length} entries`);
-    
-    // Generate main index.html with recent posts
-    generateMainIndex(postsIndex);
-    
-    // Copy static files (CSS, JS, etc.)
-    copyStaticFiles();
-    
-    // Copy category pages
-    copyCategoryPages();
-    
-    console.log('Site build complete!');
-    
+
   } catch (error) {
     console.error('Error building site:', error);
   }
-}
-
-// Generate main index.html with recent posts
-function generateMainIndex(postsIndex) {
-  // Read the template
-  const indexTemplatePath = path.join(process.cwd(), 'index.html');
-  if (!fs.existsSync(indexTemplatePath)) {
-    console.warn('index.html template not found, skipping main index generation');
-    return;
-  }
-  
-  const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf8');
-  
-  // Write to output directory
-  fs.writeFileSync(path.join(OUTPUT_DIR, 'index.html'), indexTemplate);
-  console.log('Generated main index.html');
-}
-
-// Copy category pages to output directory
-function copyCategoryPages() {
-  const catDir = path.join(process.cwd(), 'cat');
-  if (!fs.existsSync(catDir)) {
-    console.warn('Category directory not found, skipping category page copying');
-    return;
-  }
-  
-  const outputCatDir = path.join(OUTPUT_DIR, 'cat');
-  ensureDirectoryExists(outputCatDir);
-  
-  const categoryFiles = fs.readdirSync(catDir);
-  categoryFiles.forEach(file => {
-    if (file.endsWith('.html')) {
-      fs.copyFileSync(
-        path.join(catDir, file),
-        path.join(outputCatDir, file)
-      );
-      console.log(`Copied category page: ${file}`);
-    }
-  });
-}
-
-// Copy static files to output directory
-function copyStaticFiles() {
-  // Ensure src directory exists in output
-  ensureDirectoryExists(path.join(OUTPUT_DIR, 'src'));
-  
-  // Copy CSS files
-  fs.copyFileSync('./src/style.css', path.join(OUTPUT_DIR, 'src', 'style.css'));
-  fs.copyFileSync('./src/blog.css', path.join(OUTPUT_DIR, 'src', 'blog.css'));
-  
-  // Copy JS files
-  fs.copyFileSync('./src/index.js', path.join(OUTPUT_DIR, 'src', 'index.js'));
-  fs.copyFileSync('./src/markdown.js', path.join(OUTPUT_DIR, 'src', 'markdown.js'));
-  fs.copyFileSync('./src/blog.js', path.join(OUTPUT_DIR, 'src', 'blog.js'));
-  
-  console.log('Static files copied to output directory');
 }
 
 // Run the build
